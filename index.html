@@ -10,17 +10,64 @@
   <body>
     <header>
       <h1>Toga Skate Rave Event Registration</h1>
-      
     </header>
     <!-- <nav></nav> -->
     <main>
-      <div class="haiku">
-        <h2>Wheels</h2>
+      <div class="haiku container">
+        <h2>Bring Your Wheels</h2>
         <pre>
           Come skate with us please
           You will not be sorry you did
           We rave skate, wear togas
         </pre>
+      </div>
+
+      <div class="container">
+        <form class="flex-col" id="rsvp-form">
+          <div>
+            <h3>Will you be able to make it?</h3>
+            <input type="radio" name="rsvp" id="rsvp-yes" />
+            <label for="rsvp-yes">Yes</label>
+            <input type="radio" name="rsvp" id="rsvp-no" />
+            <label for="rsvp-no">No</label>
+          </div>
+
+          <label for="guest-name">Name</label>
+          <input type="text" name="guest-name" id="guest-name" />
+
+          <label for="amount-attending">Amount Attending</label>
+          <input type="number" name="amount-attending" id="amount-attending" />
+
+          <label for="allergies">Allergies</label>
+          <textarea name="allergies" id=""></textarea>
+
+          <label for="allergies">Any Allergies?</label>
+          <textarea name="allergies" id="allergies"></textarea>
+
+          <div>
+            <h3>Over 21?</h3>
+            <input type="radio" name="over-21" id="over-21-yes" />
+            <label for="over-21-yes">Yes</label>
+            <input type="radio" name="over-21" id="over-21-no" />
+            <label for="over-21-no">No</label>
+          </div>
+
+          <label for="guest-phone">Phone</label>
+          <input type="text" name="guest-phone" id="guest-phone" />
+
+          <div>
+            <h3>Contact Preferences</h3>
+            <input type="checkbox" name="contact-text" id="contact-text" />
+            <label for="contact-text">Text</label>
+            <input type="checkbox" name="contact-email" id="contact-email" />
+            <label for="contact-email">Email</label>
+          </div>
+
+          <label for="guest-email">Email</label>
+          <input type="email" name="guest-email" id="guest-email" />
+          
+          <button type="submit">Submit</button>
+        </form>
       </div>
     </main>
     <footer>&copy; Codex March 2025 Cohort</footer>
