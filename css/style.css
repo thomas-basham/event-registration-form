@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap');
+
+.rubik-gemstones-regular {
+  font-family: "Rubik Gemstones", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   /* border: red .2px solid !important; */
+}
+
+h1,
+h2 {
+  font-family: "Rubik Gemstones", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
@@ -20,15 +35,15 @@ footer {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 64px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .container {
