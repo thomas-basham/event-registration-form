@@ -92,7 +92,10 @@ form {
   min-height: 60vh;
   border: solid 2px black;
   border-radius: 4px;
-  padding: 1rem
+  padding: 1rem;
+
+
+
 }
 
 .flex-col {
@@ -103,9 +106,9 @@ form {
 
 .hero {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  border-collapse: collapse;
   margin-bottom: 4rem;
 }
 
@@ -116,4 +119,38 @@ radio {
   color: var(--space-cadet);
   border-color: var(--rose-quartz);
   border-radius: 5px;
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+img {
+  filter: drop-shadow(8px 8px 10px var(--space-cadet));
+  border-radius: 6px;
+}
+
+.one-second-fade {
+  animation: fadeInUp;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  /* don't forget to set a duration! */
+}
+
+/* Medium devices such as tablets (1024px or lesser) */
+@media only screen and (max-width: 1024px) {}
+
+/* Small devices such as phones (768px or lesser) */
+@media only screen and (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  form {
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
 }
