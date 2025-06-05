@@ -7,6 +7,7 @@
   --rose-quartz: hsla(309, 6%, 58%, 1);
   --pale-dogwood: hsla(11, 24%, 72%, 1);
   --isabelline: hsla(21, 35%, 92%, 1);
+  --neon-pink: rgba(249, 0, 178, .5);
 }
 
 html,
@@ -22,6 +23,7 @@ button {
   height: 2.5rem;
   border-radius: 8px;
   font-size: 1.2rem;
+  border-color: var(--neon-pink);
 }
 
 button:hover {
@@ -89,19 +91,16 @@ h2 {
 
 form {
   min-width: 40vw;
-  min-height: 60vh;
   border: solid 2px black;
   border-radius: 4px;
   padding: 1rem;
-
-
-
 }
 
 .flex-col {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 6px;
 }
 
 .hero {

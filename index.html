@@ -35,55 +35,64 @@
           </div>
 
           <div>
-            <button>RSVP</button>
+            <button id="rsvp-btn">RSVP</button>
             <button>Learn More</button>
           </div>
         </div>
       </section>
 
       <section class="container">
-        <form class="flex-col animate__fadeInUp one-second-fade" id="rsvp-form">
+        <form
+          style="display: none"
+          class="flex-col animate__fadeInUp one-second-fade"
+          id="rsvp-form"
+        >
           <div>
             <h3>Will you be able to make it?</h3>
-            <input type="radio" name="rsvp" id="rsvp-yes" />
+            <input type="radio" name="rsvp" id="rsvp-yes" oninput="handleShowInputs(event)"/>
             <label for="rsvp-yes">Yes</label>
-            <input type="radio" name="rsvp" id="rsvp-no" />
+            <input type="radio" name="rsvp" id="rsvp-no" oninput="handleHideInputs(event)" />
             <label for="rsvp-no">No</label>
           </div>
 
           <label for="guest-name">Name</label>
           <input type="text" name="guest-name" id="guest-name" />
+          <div id="attending-inputs" class="flex-col">
+            <label for="amount-attending">Amount Attending</label>
+            <input
+              type="number"
+              name="amount-attending"
+              id="amount-attending"
+            />
 
-          <label for="amount-attending">Amount Attending</label>
-          <input type="number" name="amount-attending" id="amount-attending" />
+            <label for="allergies">Allergies</label>
+            <textarea name="allergies" id=""></textarea>
 
-          <label for="allergies">Allergies</label>
-          <textarea name="allergies" id=""></textarea>
+            <label for="allergies">Any Allergies?</label>
+            <textarea name="allergies" id="allergies"></textarea>
 
-          <label for="allergies">Any Allergies?</label>
-          <textarea name="allergies" id="allergies"></textarea>
+            <div>
+              <h3>Over 21?</h3>
+              <input type="radio" name="over-21" id="over-21-yes" />
+              <label for="over-21-yes">Yes</label>
+              <input type="radio" name="over-21" id="over-21-no" />
+              <label for="over-21-no">No</label>
+            </div>
 
-          <div>
-            <h3>Over 21?</h3>
-            <input type="radio" name="over-21" id="over-21-yes" />
-            <label for="over-21-yes">Yes</label>
-            <input type="radio" name="over-21" id="over-21-no" />
-            <label for="over-21-no">No</label>
+            <label for="guest-phone">Phone</label>
+            <input type="text" name="guest-phone" id="guest-phone" />
+
+            <div>
+              <h3>Contact Preferences</h3>
+              <input type="checkbox" name="contact-text" id="contact-text" />
+              <label for="contact-text">Text</label>
+              <input type="checkbox" name="contact-email" id="contact-email" />
+              <label for="contact-email">Email</label>
+            </div>
+
+            <label for="guest-email">Email</label>
+            <input type="email" name="guest-email" id="guest-email" />
           </div>
-
-          <label for="guest-phone">Phone</label>
-          <input type="text" name="guest-phone" id="guest-phone" />
-
-          <div>
-            <h3>Contact Preferences</h3>
-            <input type="checkbox" name="contact-text" id="contact-text" />
-            <label for="contact-text">Text</label>
-            <input type="checkbox" name="contact-email" id="contact-email" />
-            <label for="contact-email">Email</label>
-          </div>
-
-          <label for="guest-email">Email</label>
-          <input type="email" name="guest-email" id="guest-email" />
 
           <button type="submit">Submit</button>
         </form>
@@ -91,5 +100,6 @@
     </main>
     <footer>&copy; Codex March 2025 Cohort</footer>
     <!-- js goes here at bottom of body -->
+    <script src="js/app.js"></script>
   </body>
 </html>
